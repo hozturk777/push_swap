@@ -6,7 +6,7 @@
 /*   By: hsyn <hsyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 19:12:21 by hsyn              #+#    #+#             */
-/*   Updated: 2025/04/07 23:23:59 by hsyn             ###   ########.fr       */
+/*   Updated: 2025/04/07 23:38:59 by hsyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	sort_nodes(t_node **a, t_node **b)
 		pb(b, a);
 	if (len-- > 3 && check_sorted(*a))
 		pb(b, a);
-	while (len -- > 3 && check_sorted(*a))
+	while (len-- > 3 && check_sorted(*a))
 	{
 		setup_a(*a, *b);
 		move_a_to_b(a, b);

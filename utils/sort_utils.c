@@ -6,7 +6,7 @@
 /*   By: hsyn <hsyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 19:32:22 by hsyn              #+#    #+#             */
-/*   Updated: 2025/04/07 23:19:44 by hsyn             ###   ########.fr       */
+/*   Updated: 2025/04/07 23:40:46 by hsyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	set_index(t_node *stack)
 		else
 			stack->median = 0;
 		stack = stack->next;
+		is_index++;
 	}
 }
 
