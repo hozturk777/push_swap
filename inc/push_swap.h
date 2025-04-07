@@ -6,7 +6,7 @@
 /*   By: hsyn <hsyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 17:55:57 by hsyn              #+#    #+#             */
-/*   Updated: 2025/04/06 20:25:41 by hsyn             ###   ########.fr       */
+/*   Updated: 2025/04/06 23:13:10 by hsyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ typedef struct s_node
 	int				index;
 	int				push_cost;
 	int				lowest_cost;
+	int				median;
 	struct s_node	*target_node;
 	struct s_node	*next;
 	struct s_node	*prev;

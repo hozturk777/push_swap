@@ -1,8 +1,9 @@
 MAKEFLAGS 			+= --no-print-directory
-NAME				= so_long
+NAME				= push_swap
 LIBFT				= ./lib/libft/libft.a
 PRINTF				= ./lib/ft_printf/libftprintf.a
 SRC_DIR				= source/
+UTL_DIR				= utils/
 ERR_DIR				= error/
 VAL_DIR				= validation/
 OBJ_DIR				= obj/
@@ -11,7 +12,9 @@ CC					= cc
 RM					= rm -rf
 
 SO_LONG_DIR			=	$(SRC_DIR)push_swap.c \
+						$(UTL_DIR)get_utils.c \
 						$(ERR_DIR)errors.c \
+						$(ERR_DIR)destroy.c \
 						$(VAL_DIR)validate.c \
 						$(VAL_DIR)validate_number.c \
 						

@@ -6,7 +6,7 @@
 /*   By: hsyn <hsyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 20:17:25 by hsyn              #+#    #+#             */
-/*   Updated: 2025/04/06 23:02:02 by hsyn             ###   ########.fr       */
+/*   Updated: 2025/04/07 16:26:54 by hsyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static	int	ft_atol(const char *str, int *nbr)
 		return (1);
 	else
 	{
-		*nbr = result;
+		*nbr = (int)result;
 		return (0);
 	}
 }
@@ -54,7 +54,7 @@ static int	build_stack(t_node **stack, int num)
 
 	if (!stack)
 		return (1);
-	node = ft_calloc(1, size_t(t_node));
+	node = ft_calloc(1, sizeof(t_node));
 	if (!node)
 		return (1);
 	node->next = NULL;
@@ -79,19 +79,19 @@ void	validate_and_build(t_node **a, char **av, int flag)
 	int		i;
 
 	i = 0;
-	nbr = 0;
 	while (av[i])
 	{
+		nbr = 0;
 		if (check_valid_number(av[i]))
-			//error_control(a, av, flag);
+			error_control(a, av, flag);
 		if (ft_atol(av[i], &nbr))
-			//error_control(a, av, flag);
-		if (is_duplicate(a, nbr))
-			//error_control(a, av, find_lowest_cost);
+			error_control(a, av, flag);
+		if (is_duplicate(*a, nbr))
+			error_control(a, av, flag);
 		if (build_stack(a, nbr))
-			//error_control(a, av, flag);
+			error_control(a, av, flag);
 		i++;
 	}
-	//if (flag)
-	//	free_split(av);
+	if (flag)
+		free_split(av);
 }
