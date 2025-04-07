@@ -6,7 +6,7 @@
 /*   By: hsyn <hsyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 17:55:57 by hsyn              #+#    #+#             */
-/*   Updated: 2025/04/07 18:38:00 by hsyn             ###   ########.fr       */
+/*   Updated: 2025/04/07 23:17:30 by hsyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,16 @@ void		setup_a(t_node *a, t_node *b);
 void		setup_b(t_node *a, t_node *b);
 void		set_index(t_node *stack);
 void		find_lowest_cost(t_node *stack);
-void		rotate_to_top(t_node **stack, t_node *top_node, char stack_name);
+void		top_lowest_node(t_node **stack, t_node *lowest_node, char name);
 //void		sort_three_node(t_node **a);
 void		sort_nodes(t_node **a, t_node **b);
 void		move_b_to_a(t_node **a, t_node **b);
 void		move_a_to_b(t_node **a, t_node **b);
 void		check_null(void	*ptr);
 void		sort_select(t_node **a, t_node **b);
+void		rotate_lowest_top(t_node **a, t_node **b, t_node *lowest_node);
+void		rev_rotate_lowest_top(t_node **a, t_node **b, t_node *lowest_node);
+void		top_min_node(t_node **a);
 
 void		sa(t_node **a);
 void		ra(t_node **a);

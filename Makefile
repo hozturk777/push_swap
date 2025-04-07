@@ -16,10 +16,14 @@ SO_LONG_DIR			=	$(SRC_DIR)push_swap.c \
 						$(SRC_DIR)sorting_choice.c \
 						$(UTL_DIR)get_utils.c \
 						$(UTL_DIR)utils.c \
+						$(UTL_DIR)sort_utils.c \
+						$(UTL_DIR)sortb_utils.c \
+						$(UTL_DIR)move_utils.c \
 						$(CMD_DIR)swap.c \
 						$(CMD_DIR)rotate.c \
 						$(CMD_DIR)reverse_rotate.c \
 						$(CMD_DIR)push.c \
+						$(CMD_DIR)move.c \
 						$(ERR_DIR)errors.c \
 						$(ERR_DIR)destroy.c \
 						$(VAL_DIR)validate.c \

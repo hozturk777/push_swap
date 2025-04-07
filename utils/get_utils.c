@@ -6,7 +6,7 @@
 /*   By: hsyn <hsyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 22:51:22 by hsyn              #+#    #+#             */
-/*   Updated: 2025/04/07 18:35:25 by hsyn             ###   ########.fr       */
+/*   Updated: 2025/04/07 23:25:19 by hsyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,38 @@ t_node	*get_max_node(t_node *stack)
 	}
 	return (max_node);
 }
+
+t_node	*get_min_node(t_node *stack)
+{
+	long	min_num;
+	t_node	*min_node;
+
+	min_num = LONG_MAX;
+	if (!stack)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->num < min_num)
+		{
+			min_num = stack->num;
+			min_node = stack;
+		}
+		stack = stack->next;
+	}
+	return (min_node);
+}
+
+
+t_node	*get_lowest_cost(t_node *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->lowest_cost)
+			return (stack);
+		stack = stack->next;
+	}
+	return (NULL);
+}
+
