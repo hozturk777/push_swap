@@ -6,7 +6,7 @@
 /*   By: hsyn <hsyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 18:39:18 by hsyn              #+#    #+#             */
-/*   Updated: 2025/04/07 18:46:56 by hsyn             ###   ########.fr       */
+/*   Updated: 2025/04/08 00:13:41 by hsyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ void	rrr(t_node **a, t_node **b)
 {
 	reverse_rotate_node(a);
 	reverse_rotate_node(b);
-	ft_printf("rrb\n");
+	ft_printf("rrr\n");
 }
