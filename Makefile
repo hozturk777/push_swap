@@ -4,6 +4,7 @@ LIBFT				= ./lib/libft/libft.a
 PRINTF				= ./lib/ft_printf/libftprintf.a
 SRC_DIR				= source/
 UTL_DIR				= utils/
+CMD_DIR				= commands/
 ERR_DIR				= error/
 VAL_DIR				= validation/
 OBJ_DIR				= obj/
@@ -12,7 +13,13 @@ CC					= cc
 RM					= rm -rf
 
 SO_LONG_DIR			=	$(SRC_DIR)push_swap.c \
+						$(SRC_DIR)sorting_choice.c \
 						$(UTL_DIR)get_utils.c \
+						$(UTL_DIR)utils.c \
+						$(CMD_DIR)swap.c \
+						$(CMD_DIR)rotate.c \
+						$(CMD_DIR)reverse_rotate.c \
+						$(CMD_DIR)push.c \
 						$(ERR_DIR)errors.c \
 						$(ERR_DIR)destroy.c \
 						$(VAL_DIR)validate.c \

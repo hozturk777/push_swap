@@ -6,7 +6,7 @@
 /*   By: hsyn <hsyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 17:55:57 by hsyn              #+#    #+#             */
-/*   Updated: 2025/04/06 23:13:10 by hsyn             ###   ########.fr       */
+/*   Updated: 2025/04/07 18:38:00 by hsyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # endif
 
 # ifndef LONG_MIN
-#  define LONG_MIN -9223372036854775808
+#  define LONG_MIN -9223372036854775807
 # endif
 
 # ifndef INT_MAX
@@ -47,7 +47,7 @@ typedef struct s_node
 int			check_valid_number(char	*str);
 int			is_duplicate(t_node *a, int num);
 int			stack_len(t_node *stack);
-int			check_sorted(t_node *stack);
+//int			check_sorted(t_node *stack);
 
 t_node		*get_lowest_cost(t_node *stack);
 t_node		*get_last_node(t_node *stack);
@@ -64,12 +64,12 @@ void		setup_b(t_node *a, t_node *b);
 void		set_index(t_node *stack);
 void		find_lowest_cost(t_node *stack);
 void		rotate_to_top(t_node **stack, t_node *top_node, char stack_name);
-void		sort_three_node(t_node *a);
+//void		sort_three_node(t_node **a);
 void		sort_nodes(t_node **a, t_node **b);
 void		move_b_to_a(t_node **a, t_node **b);
 void		move_a_to_b(t_node **a, t_node **b);
 void		check_null(void	*ptr);
-void		sort_select(t_node *a, t_node *b);
+void		sort_select(t_node **a, t_node **b);
 
 void		sa(t_node **a);
 void		ra(t_node **a);

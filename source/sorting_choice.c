@@ -6,18 +6,58 @@
 /*   By: hsyn <hsyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 19:12:21 by hsyn              #+#    #+#             */
-/*   Updated: 2025/04/06 19:19:30 by hsyn             ###   ########.fr       */
+/*   Updated: 2025/04/07 19:22:14 by hsyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	sort_select(t_node *a, t_node *b)
+static int	check_sorted(t_node *stack)
 {
-	if (!check_sorted(*a))
+	if (!stack)
+		return (0);
+	while (stack->next)
+	{
+		if (stack->num > stack->next->num)
+			return (1);
+		stack = stack->next;
+	}
+	return (0);
+}
+
+static void	sort_three_node(t_node **a)
+{
+	t_node	*max_node;
+
+	max_node = get_max_node(*a);
+	if (max_node == *a)
+		ra(a);
+	else if (max_node == (*a)->next)
+		rra(a);
+	if ((*a)->num > (*a)->next->num)
 		sa(a);
-	else if (stack_len(*a) == 3)
-		sort_three_node(a);
-	else
-		sort_nodes(a, b);
+}
+
+void	sort_nodes(t_node **a, t_node **b)
+{
+	int	len;
+
+	len = stack_len(*a);
+	if (len-- > 3 && check_sorted(*a))
+		pb(b, a);
+	if (len-- > 3 && check_sorted(*a))
+		pb(b, a);
+}
+
+void	sort_select(t_node **a, t_node **b)
+{
+	if (check_sorted(*a))
+	{
+		if (stack_len(*a) == 2)
+			sa(a);
+		else if (stack_len(*a) == 3)
+			sort_three_node(a);
+		else
+			sort_nodes(a, b);
+	}
 }
