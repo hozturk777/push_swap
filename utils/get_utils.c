@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsyn <hsyn@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: huozturk <huozturk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/06 22:51:22 by hsyn              #+#    #+#             */
-/*   Updated: 2025/04/07 23:25:19 by hsyn             ###   ########.fr       */
+/*   Created: 2025/04/06 22:51:22 by huozturk          #+#    #+#             */
+/*   Updated: 2025/04/11 15:11:45 by huozturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ t_node	*get_min_node(t_node *stack)
 	return (min_node);
 }
 
-
 t_node	*get_lowest_cost(t_node *stack)
 {
 	if (!stack)
@@ -76,4 +75,3 @@ t_node	*get_lowest_cost(t_node *stack)
 	}
 	return (NULL);
 }
-

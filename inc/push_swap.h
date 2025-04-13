@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsyn <hsyn@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: huozturk <huozturk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/06 17:55:57 by hsyn              #+#    #+#             */
-/*   Updated: 2025/04/07 23:17:30 by hsyn             ###   ########.fr       */
+/*   Created: 2025/04/06 17:55:57 by huozturk          #+#    #+#             */
+/*   Updated: 2025/04/13 13:00:55 by huozturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ typedef struct s_node
 int			check_valid_number(char	*str);
 int			is_duplicate(t_node *a, int num);
 int			stack_len(t_node *stack);
-//int			check_sorted(t_node *stack);
 
 t_node		*get_lowest_cost(t_node *stack);
 t_node		*get_last_node(t_node *stack);
@@ -64,7 +63,6 @@ void		setup_b(t_node *a, t_node *b);
 void		set_index(t_node *stack);
 void		find_lowest_cost(t_node *stack);
 void		top_lowest_node(t_node **stack, t_node *lowest_node, char name);
-//void		sort_three_node(t_node **a);
 void		sort_nodes(t_node **a, t_node **b);
 void		move_b_to_a(t_node **a, t_node **b);
 void		move_a_to_b(t_node **a, t_node **b);
